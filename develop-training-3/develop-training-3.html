@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // root
+      const body = window.document.body;
+      const root = document.createElement("div");
+      body.appendChild(root);
+      root.style.widths = "100vw";
+      root.style.height = "100vh";
+      root.id = "root";
+
+      // ---------------------header-----------------------------
+      const headerArray = [];
+      // function header(header, ul, li, hr, textnode, count) {
+      //   headerArray.push (
+      //          `<${header} ><${ul} ><${li}>${textnode}</${li}> </${ul}> <${hr}></${header}>`);
+
+      const litext = ["shop", "about", "contact", "account", "search", "bag"];
+
+      function ForLI() {
+        for (let i = 0; i < litext.length; i++) {
+          headerArray.push(`<li>${litext[i]}</li>`);
+          // headerArray[i] = `<li>${litext[i]}</li>`;
+          console.log(`<li>${litext[i]}</li>`);
+        }
+      }
+      // root.innerHTML = result.join();
+      ForLI();
+      console.log(headerArray);
+      // }
+
+      // header("header", "ul", "li", "hr", "반가워용", " ");
+      // console.log(headerArray);
+      // root.innerHTML = headerArray.join();
+
+      // ------------------thumnail-------------------
+
+      function thumnail() {}
+    </script>
+  </body>
+</html>

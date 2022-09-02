@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/leeahyeon01/constructor-function/issues"
   },
-  "homepage": "https://github.com/leeahyeon01/constructor-function#readme"
+  "homepage": "https://github.com/leeahyeon01/constructor-function#readme",
+  "type": "model"
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // root
+      const body = window.document.body;
+      const root = document.createElement("div");
+      body.appendChild(root);
+      root.style.width = "100vw";
+      root.style.height = "100vh";
+
+      // -----------------------header--------------------------
+
+      const headerArray = [];
+      const litext = ["shop", "about", "contact", "account", "search", "bag"];
+
+      function ForLI() {
+        for (let i = 0; i < litext.length; i++) {
+          headerArray.push(`<li>${litext[i]}</li>`);
+        }
+        headerArray.push(` </ul><hr> </header>`);
+      }
+      headerArray.unshift(`<header ><ul >`);
+
+      ForLI();
+
+      console.log(headerArray);
+      root.innerHTML = headerArray.join();
+      //join 찍을때 마다 나오는 ,(콤마)를 없애주기 위해
+      root.innerHTML = headerArray.join("");
+
+      const header = root.children[0];
+      header.style.width = "100vw";
+      header.style.height = "10vh";
+      header.style.backgroundColor = "red";
+      header.style.display = "flex";
+      header.style.flexDirection = "column";
+      header.style.flexWrap = "nowrap";
+      header.style.alignContent = "center";
+      header.style.alignItem = "center";
+      header.style.justifyContent = "space-between";
+
+      const ul = header.children[0];
+      ul.style.display = "flex";
+      ul.style.flexDirection = "row";
+      ul.style.flexWrap = "nowrap";
+      ul.style.alignContent = "center";
+      ul.style.alignItem = "center";
+      ul.style.justifyContent = "space-between";
+      ul.style.width = "80vw";
+      ul.style.listStyle = "none";
+
+      const hr = header.children[1];
+      hr.style.backgroundColor = "black";
+      hr.style.width = "80%";
+      hr.style.height = "3px";
+
+      console.dir(header);
+
+      // -------------------section-----------------------------
+      const section = document.createElement("div");
+      root.appendChild(section);
+
+      section.style.width = "60vw";
+      section.style.height = "70vh";
+      section.style.border = "solid 2px blue";
+      console.dir(section);
+
+      // function Forcontent(){
+      //   for()
+      // }
+    </script>
+  </body>
+</html>

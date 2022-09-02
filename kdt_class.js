@@ -26,12 +26,16 @@ const students = [
   "최화연",
 ];
 console.log("aaa");
-console.dir(students.textContent);
-const newstudent = [];
 
+function list(id, name) {
+  this.id = id;
+  this.name = name;
+}
+
+const newstudent = [];
 // Q.1 studnets의 id, name 찍어주기
 for (let i = 0; i < students.length; i++) {
-  newstudent.push(new PP(i, students[i]));
+  newstudent.push(new list(i, students[i]));
 }
 console.log(newstudent);
 
@@ -57,10 +61,9 @@ function findKim() {
     if (students[i][0] === "김") {
       students[i] = "피카츄";
     }
-
-    console.log(students);
   }
 }
+console.log(students);
 
 console.log(findKim());
 
